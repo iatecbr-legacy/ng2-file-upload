@@ -1,0 +1,30 @@
+{
+  "name": "@iatec/ng2-file-upload",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "gulp js:build && ngc --p tsconfig-aot.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iatecbr/ng2-file-upload.git"
+  },
+  "devDependencies": {
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/http": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "@types/node": "~6.0.60",
+    "core-js": "^2.4.1",
+    "gulp": "^3.9.1",
+    "gulp-inline-ng2-template": "^4.0.0",
+    "rxjs": "^5.4.2",
+    "ts-node": "~3.2.0",
+    "typescript": "2.4.2",
+    "zone.js": "^0.8.14"
+  }
+}

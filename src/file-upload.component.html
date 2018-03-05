@@ -1,0 +1,13 @@
+<input type="file" 
+#iFile
+*ngIf="!(defaults.disabled != null && defaults.disabled !== false)"
+(change)="onChange($event)" 
+[accept]="defaults.accept" 
+[title]="defaults.tooltip" 
+[multiple]="defaults.multiple != null && defaults.multiple !== false"
+/>
+<div [ngClass]="{ disabled: defaults.disabled, hover: !(defaults.disabled != null && defaults.disabled !== false) && inSideDrag }">
+    <div class="icon"><span class="{{defaults.disabled ? defaults.classIconDisabled : defaults.classIcon}}"></span></div>
+    <div *ngIf="!outSideDrag && !defaults.disabled" class="legend">{{defaults.label}}</div>
+    <h3 *ngIf="outSideDrag && !defaults.disabled">{{defaults.outSideLabel}}</h3>
+</div>
