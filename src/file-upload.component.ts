@@ -129,7 +129,7 @@ export class FileUploadComponent implements AfterViewInit, OnDestroy {
         
         //type extension
         if (this.defaults.accept != null && this.defaults.accept.length >= 2) {
-            let pre = this.defaults.accept.replace(/\./g, '').replace(/,/g, '|');
+            let pre = this.defaults.accept.replace(/\.|\s/g, '').replace(/,/g, '|');
             let regex = new RegExp(`(${pre})$`, "i");
             if (!regex.test(file.name))
                 return FileUploadErrorEnum.EXTENSION_NOT_ALLOW;
